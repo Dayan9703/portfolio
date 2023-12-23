@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #2d2d39;
+}
+
+.box {
+    position: relative;
+    width: 80%;
+    height: 3000px;
+    display: flex;
+    background: repeating-conic-gradient(from var(--q), #263af1 0%, #263af1 5%, transparent 5%, transparent 40%, #263af1 50%);
+    animation: animate 8s linear infinite;
+    border-radius: 20px;
+}
+
+@property --q {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+
+@keyframes animate {
+    0% {
+        --q: 0deg;
+    }
+
+    100% {
+        --q: 360deg;
+    }
+}
+
+.box::after {
+    content: '';
+    position: relative;
+    inset: 18px;
+    background: #2d2d39;
+    border-radius: 15px;
+    border: 8px;
+}
+
+#logo-name {
+    top: 50%;
+    animation: fill 0.8s ease forwards 4.8s;
+}
+
+#logo-name path:nth-child(n) {
+    display: none;
+
+}
+
+@keyframes line-anim {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fill {
+    from {
+        fill: transparent;
+    }
+
+    to {
+        fill: white;
+    }
+}
+
+
+.box1 {
+    position: absolute;
+    inset: 18px;
+    background: #2d2d39;
+    border-radius: 15px;
+    border: 8px;
+}
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -30px px;
+}
+.col-md-1 {
+    -ms-flex: 0 0 25%;
+    flex: 12 6 59%;
+    max-width: 32%;
+}
+.col-md-2 {
+    -ms-flex: 0 0 25%;
+    flex: 12 6 59%;
+    max-width: 32%;
+}
+.col-md-3 {
+    -ms-flex: 0 0 25%;
+    flex: 12 6 59%;
+    max-width: 32%;
+}
