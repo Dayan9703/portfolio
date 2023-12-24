@@ -91,7 +91,9 @@ body {
 .box {
     position: relative;
     width: 80%;
-    height: 800px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    height: -webkit-fill-available;
     display: flex;
     background: repeating-conic-gradient(from var(--q), #263af1 0%, #263af1 5%, transparent 5%, transparent 40%, #263af1 50%);
     animation: animate 8s linear infinite;
