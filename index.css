@@ -141,6 +141,9 @@ body {
     margin-left: -30px px;
 }
 .col-md-1 {
+  margin-top: 20%;
+  margin-left: 5%;
+  margin-right: 45%;
     -ms-flex: 0 0 25%;
     flex: 12 6 59%;
     max-width: 50%;
@@ -156,3 +159,19 @@ body {
     max-width: 35%;
 }
 
+.welcome-message {
+  transform-origin: 0;
+  opacity: 1;
+  transition: all .2s linear;
+  transform: scaleX(1);
+}
+
+.span:before {
+  content: " ";
+  width: 2px;
+  background: linear-gradient(0deg,var(--grad-2)0%,var(--grad-1)100%);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -30px;
+}
