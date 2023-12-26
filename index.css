@@ -5,30 +5,35 @@ body {
   height: 100%;
   font-family: cursive;
   font-size: 5vs;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  min-height: 100vh;
+  background-color: #2d2d39;
+  color: #a2a2a2;
 }
 
 h1 {
-  font-family: cursive;
-  font-size: 5vw;
-  text-align: center;
+  font-family: Lucida Calligraphy;
+  font-size: 50px;
+  text-align: justify;
   line-height: 1;
   margin: 0;
-  top: 70px;
   left: 50%;
   transform: translate(-50%, -50%);
-  position: absolute;
-  color: rgb(133, 128, 128);
+  position: relative;
+  color: #a2a2a2;
   letter-spacing: 0rem;
 }
 h1:before {
   content: attr(data-heading);
-  position: absolute;
+  position: relative;
   overflow: hidden;
   color: #ffcc00;
   width: 100%;
   z-index: 9;
   text-shadow: none;
-  left: 37.5%;
+  left: 102px;
   text-align: left;
   -webkit-animation: flicker 3s linear infinite;
           animation: flicker 3s linear infinite;
@@ -55,41 +60,12 @@ h1:before {
     text-shadow: none;
   }
 }
-/*
- * Webfont: CoreCircus by S-Core
- * URL: http://www.myfonts.com/fonts/s-core/core-circus/regular/
- * Copyright: Copyright (c) 2013 by S-Core Co., Ltd.. All rights reserved.
- * Licensed pageviews: 10,000
-*
- * Webfont: CoreCircus2DDot1 by S-Core
- * URL: http://www.myfonts.com/fonts/s-core/core-circus/dot1/
- * Copyright: Copyright (c) 2013 by S-Core Co., Ltd.. All rights reserved.
- * Licensed pageviews: 10,000
-*/
-@font-face {
-  font-family: "CoreCircus2DDot1";
-  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_1_0.eot");
-  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_1_0.eot?#iefix") format("embedded-opentype"), url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_1_0.woff2") format("woff2"), url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_1_0.woff") format("woff"), url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_1_0.ttf") format("truetype");
-}
-@font-face {
-  font-family: "CoreCircus";
-  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_8_0.eot");
-  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_8_0.eot?#iefix") format("embedded-opentype"), url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_8_0.woff2") format("woff2"), url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_8_0.woff") format("woff"), url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_8_0.ttf") format("truetype");
-}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #2d2d39;
-}
-
 
 .box {
     position: relative;
@@ -142,7 +118,8 @@ body {
 
 .row {
     display: -ms-flexbox;
-    display: flex;
+    display: grid;
+    grid-template-columns: 50% 15% 35%;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     margin-left: -30px px;
@@ -150,10 +127,8 @@ body {
 .col-md-1 {
   margin-top: 20%;
   margin-left: 5%;
-  margin-right: 45%;
     -ms-flex: 0 0 25%;
     flex: 12 6 59%;
-    max-width: 50%;
 }
 .col-md-2 {
     -ms-flex: 0 0 25%;
