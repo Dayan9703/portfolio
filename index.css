@@ -59,6 +59,7 @@ h1:before {
     /* Otros estilos para dispositivos móviles */
   }
 }
+
 @-webkit-keyframes flicker {
 
   0%,
@@ -268,7 +269,7 @@ div a span:after {
   right: 0;
 }
 
-.span{
+.span {
   position: relative;
 }
 
@@ -285,6 +286,7 @@ div a span:after {
   bottom: 0;
   left: -30px;
 }
+
 .mensaje::before {
   content: " ";
   width: 2px;
