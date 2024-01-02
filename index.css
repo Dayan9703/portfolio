@@ -142,8 +142,6 @@ h1:before {
   background: repeating-conic-gradient(from var(--q), #263AFB 0%, #263AFB 5%, transparent 5%, transparent 40%, #263AFB 50%);
   animation: animate 8s linear infinite;
   border-radius: 20px;
-
-
 }
 
 @property --q {
